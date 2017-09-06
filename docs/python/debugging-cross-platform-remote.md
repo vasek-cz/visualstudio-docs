@@ -51,19 +51,19 @@ For details on creating a firewall rule for an Azure VM, see [Opening ports to a
     print('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
 
     while guesses_made < 6:
-    guess = int(input('Take a guess: '))
-    guesses_made += 1
-    if guess < number:
-        print('Your guess is too low.')
-    if guess > number:
-        print('Your guess is too high.')
+        guess = int(input('Take a guess: '))
+        guesses_made += 1
+        if guess < number:
+            print('Your guess is too low.')
+        if guess > number:
+            print('Your guess is too high.')
+        if guess == number:
+            break
     if guess == number:
-        break
-    if guess == number:
-    print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
+        print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
     else:
-    print('Nope. The number I was thinking of was {0}'.format(number))
-  ```
+        print('Nope. The number I was thinking of was {0}'.format(number))
+```
  
 1. Install the `ptvsd` package into your environment using `pip3 install ptvsd`. (Note: it's a good idea to record the version of ptvsd that's installed in case you need it for troubleshooting; the [ptvsd listing](https://pypi.python.org/pypi/ptvsd) also shows available versions.)
 
